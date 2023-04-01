@@ -1,0 +1,39 @@
+.AgeSeparator {
+	display: grid;
+	align-items: center;
+}
+
+.AgeSeparator > * {
+	grid-row: 1 / -1;
+	grid-column: 1 / -1;
+}
+
+hr {
+	height: 2px;
+	width: 100%;
+	border: none;
+	background-color: var(--off-white);
+}
+
+button {
+	border: none;
+	border-radius: 50%;
+	width: 70px;
+	background-color: var(--clr-accent);
+	aspect-ratio: 1;
+	padding: 1rem;
+	margin-left: auto;
+	cursor: pointer;
+	transition: background-color 250ms ease;
+}
+
+button:focus-within,
+button:hover {
+	background-color: var(--off-black);
+}
+
+@media screen and (max-width: 600px) {
+	button {
+		margin: auto;
+	}
+}

@@ -26,3 +26,6 @@ body {
 	background-color: var(--off-white);
 }
 
+img {
+	width: 100%;
+}

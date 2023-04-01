@@ -1,11 +1,14 @@
 import './App.css';
+import AgeForm from './components/AgeForm.js'
+import AgeSeparator from './components/AgeSeparator.js'
+//import AgeCalculation from './components/AgeCalculation.js'
 
 function App() {
   return (
     <div className="App">
-      header
-      <hr/>
-      age
+      <AgeForm/>
+      <AgeSeparator/>
+      {/*<AgeCalculation/>*/}
     </div>
   );
 }
