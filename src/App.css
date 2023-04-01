@@ -1,8 +1,17 @@
 .App {
-	background-color: var(--white);
+	background-color: var(--clr-primray-100);
 	font-size: 16px;
-	color: var(--off-black);
-	padding: 2rem 1rem;
+	width: calc(100vw - 6rem);
+	margin-inline: auto;
+	color: var(--clr-primray-900);
+	padding: 3rem 2rem;
 	border-radius: 25px 25px 100px 25px;
+}
+
+@media screen and (min-width: 600px) {
+	.App {
+		width: 550px;
+		padding: 4rem 2rem;
+	}
 }
 

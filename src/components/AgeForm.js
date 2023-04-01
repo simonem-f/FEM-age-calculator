@@ -6,15 +6,15 @@ function AgeForm(props) {
 			<form>
 				<div>
 					<label>Day</label>
-					<input></input>
+					<input type="text" placeholder='DD'></input>
 				</div>
 				<div>
 					<label>Month</label>
-					<input></input>
+					<input type="text" placeholder='MM'></input>
 				</div>
 				<div>
 					<label>Year</label>
-					<input></input>
+					<input type="text" placeholder='YYYY'></input>
 				</div>
 			</form>
     </div>

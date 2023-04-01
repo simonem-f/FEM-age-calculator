@@ -13,6 +13,9 @@
 	--clr-error: var(--light-red);
 	--clr-primary-900: var(--off-black);
 	--clr-primary-700: var(--smokey-grey);
+	--clr-primray-300: var(--light-grey);
+	--clr-primray-200: var(--off-white);
+	--clr-primray-100: var(--white);
 }
 
 body {
@@ -29,3 +32,4 @@ body {
 img {
 	width: 100%;
 }
+

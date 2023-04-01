@@ -1,0 +1,58 @@
+form {
+	display: flex;
+	gap: 2rem;
+}
+
+form > * {
+	display: grid;
+	gap: 0.5rem;
+}
+
+label {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--clr-primary-700);
+}
+
+input {
+	max-width: 120px;
+	width: 100%;
+	font-size: 26px;
+	padding: 0.75rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	box-sizing: border-box;
+	border: none; /* <-- This thing here */
+	border: solid 1px #ccc;
+	border-radius: 10px;
+	border-color: var(--clr-primray-300);
+	transition: border 250ms ease;
+}
+
+input:focus-visible,
+input:hover {
+	outline-color: var(--clr-accent);
+	outline-offset: 1px;
+	border-color: var(--clr-accent);
+	outline: var(--clr-accent);
+}
+
+@media screen and (max-width: 600px) {
+	form {
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	input {
+		font-size: 18px;
+		border-radius: 5px;
+		padding: 0.5rem;
+		max-width: 80px;
+	}
+
+	label {
+		font-size: 12px;
+	}
+}

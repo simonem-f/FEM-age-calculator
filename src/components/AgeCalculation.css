@@ -1,0 +1,17 @@
+p {
+	font-size: 4rem;
+	font-weight: 800;
+	font-style: italic;
+	margin: 0;
+	line-height: 1.1;
+}
+
+.number {
+	color: var(--clr-accent);
+}
+
+@media screen and (max-width: 600px) {
+	p {
+		font-size: 3rem;
+	}
+}
