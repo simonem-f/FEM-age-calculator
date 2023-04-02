@@ -118,7 +118,7 @@ class AgeForm extends React.Component {
 					<div className='form-container'>
 						<div className={this.state.dayError || this.state.dateError ? 'error': ''}>
 							<label>Day</label>
-							<input value={this.state.day} onChange={this.handleDay} type="text" placeholder='DD'/>
+							<input value={this.state.day} onChange={this.handleDay} type="text" placeholder='DD' maxLength="2"/>
 							{this.state.dayError && (
 								<span className="error-message">{this.state.dayError}</span>
 							)}
@@ -128,14 +128,14 @@ class AgeForm extends React.Component {
 						</div>
 						<div className={this.state.monthError || this.state.dateError ? 'error': ''}>
 							<label>Month</label>
-							<input value={this.state.month}  onChange={this.handleMonth} type="text" placeholder='MM'/>
+							<input value={this.state.month}  onChange={this.handleMonth} type="text" placeholder='MM' maxLength="2"/>
 							{this.state.monthError && (
 								<span className="error-message">{this.state.monthError}</span>
 							)}
 						</div>
 						<div className={this.state.yearError || this.state.dateError ? 'error': ''}>
 							<label>Year</label>
-							<input value={this.state.year}  onChange={this.handleYear} type="text" placeholder='YYYY'/>
+							<input value={this.state.year}  onChange={this.handleYear} type="text" placeholder='YYYY' maxLength="4"/>
 							{this.state.yearError && (
 								<span className="error-message">{this.state.yearError}</span>
 							)}
