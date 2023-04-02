@@ -6,6 +6,7 @@
 	color: var(--clr-primray-900);
 	padding: 3rem 2rem;
 	border-radius: 25px 25px 100px 25px;
+	box-shadow: 8px 5px 25px -5px var(--clr-primray-300);
 }
 
 @media screen and (min-width: 600px) {
