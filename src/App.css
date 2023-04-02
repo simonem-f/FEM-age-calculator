@@ -2,7 +2,7 @@
 	background-color: var(--clr-primray-100);
 	font-size: 16px;
 	width: calc(100vw - 6rem);
-	margin-inline: auto;
+	margin: 2rem auto;
 	color: var(--clr-primray-900);
 	padding: 3rem 2rem;
 	border-radius: 25px 25px 100px 25px;
