@@ -13,13 +13,9 @@ class AgeForm extends React.Component {
 			yearError: '',
 			dateError: '',
 		}
-
-		this.handleDay = this.handleDay.bind(this);
-		this.handleMonth = this.handleMonth.bind(this);
-		this.handleYear = this.handleYear.bind(this);
 	}
 
-	handleDay(event) {
+	handleDay = (event) => {
 		const value = event.target.value;
 		this.setState({
 			...this.state,
@@ -29,7 +25,7 @@ class AgeForm extends React.Component {
 		});
 	}
 
-	handleMonth(event) {
+	handleMonth = (event) => {
 		const value = event.target.value;
 		this.setState({
 			...this.state,
@@ -39,7 +35,7 @@ class AgeForm extends React.Component {
 		});
 	}
 
-	handleYear(event) {
+	handleYear = (event) => {
 		const value = event.target.value;
 		this.setState({
 			...this.state,
