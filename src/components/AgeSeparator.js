@@ -5,7 +5,7 @@ function AgeSeparator(props) {
   return (
     <div className="AgeSeparator">
 			<hr/>
-			<button type="button"><img alt='submit-arrow-button' src={arrow}></img></button>
+			<button type="submit" disabled={!props.valid}><img alt='submit-arrow-button' src={arrow}></img></button>
     </div>
   );
 }

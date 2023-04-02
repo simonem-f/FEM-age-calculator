@@ -1,4 +1,5 @@
 import React from 'react';
+import AgeSeparator from './AgeSeparator';
 import './AgeForm.css';
 
 class AgeForm extends React.Component {
@@ -97,7 +98,6 @@ class AgeForm extends React.Component {
 
 		if(numDay && numMonth && numYear) {
 			const inputDate = new Date(`${yyyy}-${mm}-${dd}T00:00:00.000`);
-			console.log(inputDate);
 			if(!(inputDate.getDate() === numDay && inputDate.getMonth() + 1 === numMonth && inputDate.getFullYear() === numYear)) {
 			return 'Must be a valid date';
 			}
@@ -106,35 +106,50 @@ class AgeForm extends React.Component {
 		return '';
 	}
 
+	handleSubmit = (event) => {
+		event.preventDefault();
+		this.props.onSubmitButton(new Date(`${this.state.year}-${this.state.month}-${this.state.day}T00:00:00.000`))
+	}
 
 	render() {
 		return (
 			<div className="AgeForm">
-				<form>
-					<div className={this.state.dayError || this.state.dateError ? 'error': ''}>
-						<label>Day</label>
-						<input value={this.state.day} onChange={this.handleDay} type="text" placeholder='DD'/>
-						{this.state.dayError && (
-							<span class="error-message">{this.state.dayError}</span>
-						)}
-						{!this.state.dayError && !this.state.yearError && this.state.dateError && (
-							<span class="error-message">{this.state.dateError}</span>
-						)}
+				<form onSubmit={this.handleSubmit}>
+					<div className='form-container'>
+						<div className={this.state.dayError || this.state.dateError ? 'error': ''}>
+							<label>Day</label>
+							<input value={this.state.day} onChange={this.handleDay} type="text" placeholder='DD'/>
+							{this.state.dayError && (
+								<span className="error-message">{this.state.dayError}</span>
+							)}
+							{!this.state.dayError && !this.state.yearError && this.state.dateError && (
+								<span className="error-message">{this.state.dateError}</span>
+							)}
+						</div>
+						<div className={this.state.monthError || this.state.dateError ? 'error': ''}>
+							<label>Month</label>
+							<input value={this.state.month}  onChange={this.handleMonth} type="text" placeholder='MM'/>
+							{this.state.monthError && (
+								<span className="error-message">{this.state.monthError}</span>
+							)}
+						</div>
+						<div className={this.state.yearError || this.state.dateError ? 'error': ''}>
+							<label>Year</label>
+							<input value={this.state.year}  onChange={this.handleYear} type="text" placeholder='YYYY'/>
+							{this.state.yearError && (
+								<span className="error-message">{this.state.yearError}</span>
+							)}
+						</div>
 					</div>
-					<div className={this.state.monthError || this.state.dateError ? 'error': ''}>
-						<label>Month</label>
-						<input value={this.state.month}  onChange={this.handleMonth} type="text" placeholder='MM'/>
-						{this.state.monthError && (
-							<span class="error-message">{this.state.monthError}</span>
-						)}
-					</div>
-					<div className={this.state.yearError || this.state.dateError ? 'error': ''}>
-						<label>Year</label>
-						<input value={this.state.year}  onChange={this.handleYear} type="text" placeholder='YYYY'/>
-						{this.state.yearError && (
-							<span class="error-message">{this.state.yearError}</span>
-						)}
-					</div>
+		      <AgeSeparator valid={
+						this.state.day &&
+						this.state.month &&
+						this.state.year &&
+						!this.state.dayError &&
+						!this.state.monthError &&
+						!this.state.yearError &&
+						!this.state.dateError
+						}/>
 				</form>
 			</div>
 		);
