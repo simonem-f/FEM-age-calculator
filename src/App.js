@@ -20,7 +20,7 @@ function App() {
     return 31;
   }
 
-  function caluclateAge(date) {
+  function calculateAge(date) {
     const now = new Date();
 
     let yearsCount = 0;
@@ -33,7 +33,7 @@ function App() {
     if(now.getDate() >= date.getDate()) {
       daysCount = now.getDate() - date.getDate();
     } else {
-      daysCount = mapMonthDays(date.getMonth(), date.getFullYear()) - date.getDate() + now.getDate();
+      daysCount = mapMonthDays(date.getMonth() + 1, date.getFullYear()) - date.getDate() + now.getDate();
       repDay = 1;
     }
 
@@ -56,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-      <AgeForm onSubmitButton={caluclateAge} />
+      <AgeForm onSubmitButton={calculateAge} />
       <AgeCalculation days={age.days} months={age.months} years={age.years}/>
     </div>
   );
