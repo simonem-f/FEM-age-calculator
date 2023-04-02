@@ -4,7 +4,8 @@ form {
 }
 
 form > * {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	gap: 0.5rem;
 }
 
@@ -20,7 +21,7 @@ input {
 	max-width: 120px;
 	width: 100%;
 	font-size: 26px;
-	padding: 0.75rem;
+	padding: 0.5rem 0.75rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	box-sizing: border-box;
@@ -39,6 +40,20 @@ input:hover {
 	outline: var(--clr-accent);
 }
 
+.error-message {
+	font-size: 10px;
+	font-style: italic;
+}
+
+.error > *:not(input) {
+	color: var(--clr-error);
+}
+
+.error input {
+	outline-color: var(--clr-error);
+	border-color: var(--clr-error);
+}
+
 @media screen and (max-width: 600px) {
 	form {
 		gap: 1rem;
@@ -48,8 +63,8 @@ input:hover {
 	input {
 		font-size: 18px;
 		border-radius: 5px;
-		padding: 0.5rem;
-		max-width: 80px;
+		padding: 0.3rem 0.5rem;
+		max-width: 100px;
 	}
 
 	label {
