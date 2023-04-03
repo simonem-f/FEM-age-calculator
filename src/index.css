@@ -37,7 +37,6 @@ a {
 }
 
 .credits {
-	padding: 0.25rem;
 	position: fixed;
 	inset: auto 0 0 0;
 	backdrop-filter: blur(15px);
@@ -45,12 +44,17 @@ a {
 	font-size: 12px;
 }
 
+.credits > * {
+	padding-block: 0.5rem 0.25rem;
+}
+
 .credits a.logo-link {
 	display: inline-block;
-	vertical-align: text-top;
 }
 
 .credits img {
 	width: 1rem;
+	aspect-ratio: 1;
 	display: inline-block;
+	vertical-align: text-bottom;
 }
