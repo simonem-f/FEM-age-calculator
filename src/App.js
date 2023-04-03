@@ -38,7 +38,7 @@ function App() {
     }
 
     if(now.getMonth() >= date.getMonth()) {
-      monthsCount = now.getMonth() - date.getMonth();
+      monthsCount = now.getMonth() - date.getMonth() - repDay;
     } else {
       monthsCount = 12 - date.getMonth() + now.getMonth() - repDay;
       repMonth = 1;
