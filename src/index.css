@@ -50,6 +50,7 @@ a {
 
 .credits a.logo-link {
 	display: inline-block;
+	margin-inline: 2px;
 }
 
 .credits img {
